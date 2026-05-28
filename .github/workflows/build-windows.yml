@@ -32,6 +32,10 @@ jobs:
         run: |
           flet build windows --project flet_windows_lamzing --yes
 
+      - name: List build output
+        run: |
+          Get-ChildItem -Recurse build\ | Select-Object FullName
+
       - name: Upload build output as artifact
         uses: actions/upload-artifact@v4
         with:
