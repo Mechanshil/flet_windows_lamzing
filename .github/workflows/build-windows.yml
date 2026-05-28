@@ -32,12 +32,12 @@ jobs:
         run: |
           flet build windows --project flet_windows_lamzing --yes
 
-      - name: List build output
+      - name: Build installer with Inno Setup
         run: |
-          Get-ChildItem -Recurse build\ | Select-Object FullName
+          iscc installer.iss
 
-      - name: Upload build output as artifact
+      - name: Upload installer as artifact
         uses: actions/upload-artifact@v4
         with:
-          name: windows-build
-          path: build\flutter\build\windows\x64\runner\Release\
+          name: windows-installer
+          path: output\flet_windows_lamzing-setup-v1.0.0.exe

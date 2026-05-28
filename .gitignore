@@ -10,6 +10,7 @@ venv.bak/
 # Flet build artifacts
 build/
 dist/
+output/
 *.tar.gz
 
 # Byte-compiled / optimized / DLL files
