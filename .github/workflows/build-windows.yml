@@ -40,4 +40,4 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: windows-build
-          path: build\windows\x64\runner\Release\
+          path: build\flutter\build\windows\x64\runner\Release\
